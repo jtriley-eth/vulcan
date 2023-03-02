@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Vulcan Book</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="book.css">
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">Introduction</a></li><li class="chapter-item affix "><li class="part-title">User Guide</li><li class="chapter-item "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item "><a href="testing/index.html"><strong aria-hidden="true">2.</strong> Testing</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="testing/expect.html"><strong aria-hidden="true">2.1.</strong> Expect</a></li></ol></li><li class="chapter-item "><a href="scripts/index.html"><strong aria-hidden="true">3.</strong> Scripts</a></li><li class="chapter-item "><a href="modules/index.html"><strong aria-hidden="true">4.</strong> Using modules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/accounts.html"><strong aria-hidden="true">4.1.</strong> Accounts</a></li><li class="chapter-item "><a href="modules/commands.html"><strong aria-hidden="true">4.2.</strong> Commands</a></li><li class="chapter-item "><a href="modules/config.html"><strong aria-hidden="true">4.3.</strong> Config</a></li><li class="chapter-item "><a href="modules/console.html"><strong aria-hidden="true">4.4.</strong> Console</a></li><li class="chapter-item "><a href="modules/context.html"><strong aria-hidden="true">4.5.</strong> Context</a></li><li class="chapter-item "><a href="modules/env.html"><strong aria-hidden="true">4.6.</strong> Env</a></li><li class="chapter-item "><a href="modules/events.html"><strong aria-hidden="true">4.7.</strong> Events</a></li><li class="chapter-item "><a href="modules/forks.html"><strong aria-hidden="true">4.8.</strong> Forks</a></li><li class="chapter-item "><a href="modules/fs.html"><strong aria-hidden="true">4.9.</strong> Fs</a></li><li class="chapter-item "><a href="modules/json.html"><strong aria-hidden="true">4.10.</strong> Json</a></li><li class="chapter-item "><a href="modules/strings.html"><strong aria-hidden="true">4.11.</strong> Strings</a></li><li class="chapter-item "><a href="modules/watchers.html"><strong aria-hidden="true">4.12.</strong> Watchers</a></li></ol></li><li class="chapter-item "><li class="part-title">Reference</li><li class="chapter-item "><a href="reference/modules/index.html"><strong aria-hidden="true">5.</strong> Modules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="reference/modules/accounts.html"><strong aria-hidden="true">5.1.</strong> Accounts</a></li><li class="chapter-item "><a href="reference/modules/commands.html"><strong aria-hidden="true">5.2.</strong> Commands</a></li><li class="chapter-item "><a href="reference/modules/config.html"><strong aria-hidden="true">5.3.</strong> Config</a></li><li class="chapter-item "><a href="reference/modules/context.html"><strong aria-hidden="true">5.4.</strong> Context</a></li><li class="chapter-item "><a href="reference/modules/env.html"><strong aria-hidden="true">5.5.</strong> Env</a></li><li class="chapter-item "><a href="reference/modules/events.html"><strong aria-hidden="true">5.6.</strong> Events</a></li><li class="chapter-item "><a href="reference/modules/forks.html"><strong aria-hidden="true">5.7.</strong> Forks</a></li><li class="chapter-item "><a href="reference/modules/fs.html"><strong aria-hidden="true">5.8.</strong> Fs</a></li><li class="chapter-item "><a href="reference/modules/json.html"><strong aria-hidden="true">5.9.</strong> Json</a></li><li class="chapter-item "><a href="reference/modules/strings.html"><strong aria-hidden="true">5.10.</strong> Strings</a></li><li class="chapter-item "><a href="reference/modules/watchers.html"><strong aria-hidden="true">5.11.</strong> Watchers</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Vulcan Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/nomoixyz/vulcan" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 align=center>
+    Vulcan
+</h1>
+<p>Development framework for Foundry projects, with a focus on developer experience and readability.</p>
+<p>Built on top of <a href="https://github.com/foundry-rs/forge-std"><code>forge-std</code></a> <i style="color: red" class="fa fa-heart"></i></p>
+<p>Initially, Vulcan will provide functionality similar to what is already included in forge's VM and <code>forge-std</code>.</p>
+<p>Over time, Vulcan will grow to include more functionality and utilities, eventually becoming a feature-rich development framework.</p>
+<blockquote>
+<p><strong>Warning</strong>
+This library should be treated as highly experimental, its API WILL change, and there might be bugs in it. Don't use in production yet.</p>
+</blockquote>
+<h2 id="why-vulcan"><a class="header" href="#why-vulcan">Why Vulcan?</a></h2>
+<p>Our goal is to provide:</p>
+<ul>
+<li>Better naming for VM functionality (no more <code>prank</code>, <code>roll</code>, <code>warp</code>, ...)</li>
+<li>A testing framework with better readability and a familiar syntax</li>
+<li>Improved ergonomics</li>
+<li>...</li>
+</ul>
+<p>Vulcan test example:</p>
+<pre><code class="language-solidity">import { Test, expect, accounts, any, commands, Command,  watchers } from &quot;vulcan/test.sol&quot;;
+
+contract TestSomething is Test {
+    using accounts for *;
+    using watchers for *;
+
+    function testSomething() external {
+        // Create an address from a string, set the ETH balance and impersonate calls
+        address alice = accounts.create(&quot;Alice&quot;).setBalance(123).impersonate();
+
+        MyContract mc = new MyContract();
+
+        // This will watch all contract calls and record their execution
+        address(mc).watch().captureReverts();
+
+        mc.doSomething();
+
+        // Check that `doSomething()` reverted
+        expect(address(mc).lastCall()).toHaveRevertedWith(&quot;Something went wrong&quot;);
+
+        mc.doSomethingElse();
+
+        // Check event emissions
+        expect(address(mc).lastCall()).toHaveEmitted(
+            &quot;SomeEvent(address,bytes32,uint256)&quot;,
+            [address(1).topic(), any()], // Event topics
+            abi.encode(123) // Event data
+        );
+
+        // Expect style assertions!
+        expect(true).toBeTrue();
+        expect(true).toEqual(true);
+        expect(123).toBeGreaterThanOrEqual(123);
+        expect(123).not.toEqual(321);
+        expect(&quot;Hello world!&quot;).toContain(&quot;Hello&quot;);
+
+        // Nice external command API!
+        Command memory ping = commands.create(&quot;ping&quot;).args([&quot;-c&quot;, &quot;1&quot;]);
+        res = ping.arg(&quot;etherscan.io&quot;).run();
+        res = ping.arg(&quot;arbiscan.io&quot;).run();
+
+        // And much more!
+    }
+}
+</code></pre>
+<h2 id="planned-features"><a class="header" href="#planned-features">Planned Features</a></h2>
+<ul>
+<li><a href="https://huff.sh/">Huff language</a> support out of the box</li>
+<li>Mocking framework</li>
+<li>Deployment management framework</li>
+</ul>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>At this stage we are looking for all kinds of feedback, as the general direction of the project is not fully defined yet. If you have any ideas to improve naming, ergonomics, or anything else, please open an issue or a PR.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<p>In an existing Foundry project, use <code>forge install</code>:</p>
+<pre><code>$ forge install nomoixyz/vulcan@alpha-1
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="testing"><a class="header" href="#testing">Testing</a></h1>
+<p>Vulcan provides a simple testing framework through the base <code>Test</code> contract and the <code>expect</code> function.</p>
+<pre><code class="language-solidity">import { Test, expect } from &quot;vulcan/test.sol&quot;;
+
+contract ExampleTest is Test {
+    function testSomething() external {
+        expect(1).toBeLessThan(2);
+        expect(1).not.toEqual(2);
+        expect(1).toEqual(1);
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="expect"><a class="header" href="#expect">Expect</a></h1>
+<h2 id="expectvalue"><a class="header" href="#expectvalue"><code>expect(value)</code></a></h2>
+<p>The <code>expect</code> function allows you to assert that a value meets a certain condition through the use of matchers.</p>
+<pre><code class="language-solidity">import { Test, expect } from &quot;vulcan/test.sol&quot;;
+
+function testSomething() external {
+    expect(1).toEqual(1);
+}
+</code></pre>
+<h2 id="not"><a class="header" href="#not"><code>.not</code></a></h2>
+<blockquote>
+<p>Note: <code>.not</code> is not yet implemented for all matchers.</p>
+</blockquote>
+<p>The <code>.not</code> property inverts the result of the assertion.</p>
+<pre><code class="language-solidity">function testSomething() external {
+    expect(1).not.toEqual(2);
+}
+</code></pre>
+<h1 id="matchers"><a class="header" href="#matchers">Matchers</a></h1>
+<blockquote>
+<p>Note: Matchers are only implemented for basic types for now. Arrays, structs and other types will be supported in the future.</p>
+</blockquote>
+<h3 id="toequalvalue"><a class="header" href="#toequalvalue"><code>toEqual(value)</code></a></h3>
+<h3 id="tobetrue"><a class="header" href="#tobetrue"><code>toBeTrue()</code></a></h3>
+<h3 id="tobefalse"><a class="header" href="#tobefalse"><code>toBeFalse()</code></a></h3>
+<h3 id="tobegreaterthanvalue"><a class="header" href="#tobegreaterthanvalue"><code>toBeGreaterThan(value)</code></a></h3>
+<h3 id="tobegreaterthanorequalvalue"><a class="header" href="#tobegreaterthanorequalvalue"><code>toBeGreaterThanOrEqual(value)</code></a></h3>
+<h3 id="tobelessthanvalue"><a class="header" href="#tobelessthanvalue"><code>toBeLessThan(value)</code></a></h3>
+<h3 id="tobelessthanorequalvalue"><a class="header" href="#tobelessthanorequalvalue"><code>toBeLessThanOrEqual(value)</code></a></h3>
+<h3 id="tobeacontract"><a class="header" href="#tobeacontract"><code>toBeAContract()</code></a></h3>
+<h3 id="tobethehashofvalue"><a class="header" href="#tobethehashofvalue"><code>toBeTheHashOf(value)</code></a></h3>
+<h3 id="tocontainvalue"><a class="header" href="#tocontainvalue"><code>toContain(value)</code></a></h3>
+<h3 id="tohavelengthvalue"><a class="header" href="#tohavelengthvalue"><code>toHaveLength(value)</code></a></h3>
+<h3 id="tobeclosetovalue-delta"><a class="header" href="#tobeclosetovalue-delta"><code>toBeCloseTo(value, delta)</code></a></h3>
+<h3 id="tohavereverted"><a class="header" href="#tohavereverted"><code>toHaveReverted()</code></a></h3>
+<h3 id="tohaverevertedwithselectormessage"><a class="header" href="#tohaverevertedwithselectormessage"><code>toHaveRevertedWith(selector|message)</code></a></h3>
+<h3 id="tohavesucceeded"><a class="header" href="#tohavesucceeded"><code>toHaveSucceeded()</code></a></h3>
+<h3 id="tohaveemittedtopics"><a class="header" href="#tohaveemittedtopics"><code>toHaveEmitted(topics)</code></a></h3>
+<h3 id="tohaveemittedtopics-data"><a class="header" href="#tohaveemittedtopics-data"><code>toHaveEmitted(topics, data)</code></a></h3>
+<h3 id="tohaveemittedsignature-topics-data"><a class="header" href="#tohaveemittedsignature-topics-data"><code>toHaveEmitted(signature, topics, data)</code></a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="scripts"><a class="header" href="#scripts">Scripts</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="modules"><a class="header" href="#modules">Modules</a></h1>
+<p>The VM functionality and additional utilities are organized in modules, which are imported either through <code>vulcan/test.sol</code> or <code>vulcan/script.sol</code>.</p>
+<p>Each module can contain &quot;safe&quot; functions which are available in the imported module for both tests and scripts, and &quot;unsafe&quot; functions that are only meant to be used in tests. Unsafe functions can also be used in a script if needed (when connecting to an appropriate node) by importing the version of the module suffixed with <code>Unsafe</code>.</p>
+<pre><code class="language-solidity">/**
+ * The accounts module will contain all safe and unsafe functions when
+ * imported from `vulcan/test.sol`
+ */
+import { Test, accounts } from &quot;vulcan/test.sol&quot;;
+
+/**
+ * The accounts module will only contain safe functions when imported
+ * from `vulcan/script.sol`, and unsafe functions can be accessed by
+ * importing the `unsafe` version of the module.
+ */ 
+import { Test, accounts, accountsUnsafe } from &quot;vulcan/script.sol&quot;;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="accounts"><a class="header" href="#accounts">Accounts</a></h1>
+<p>Utilities to operate over accounts (balances, impersonation, etc.)</p>
+<pre><code class="language-solidity">import { Test, accounts } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    using accounts for *;
+
+    function testMyContract() external {
+        // Create an address from a string, sets the ETH balance and impersonate calls
+        address alice = accounts.create(&quot;Alice&quot;).setBalance(123).impersonate();
+
+        // Stop impersonating `alice`
+        accounts.stopImpersonate();
+
+        DAI dai = DAI(0x6B175474E89094C44Da98b954EedeAC495271d0F);
+
+        // Create an address from a string, mint tokens to the address and impersonate
+        // the next call
+        address bob = accounts.create(&quot;Bob&quot;).mintToken(address(dai), 1337).impersonateOnce();
+
+        // There is no need to `create` an address
+        address charlie = address(0x01).setNonce(10).setBalance(1e18);
+
+        DAI daiClone = DAI(address(0x02));
+        // Inject code into an address
+        address(daiClone).setCode(address(dai).code);
+
+        // The storage of an address can be manipulated
+        address(daiClone).setStorage(bytes32(1), bytes32(10e18));
+        // The storage of an address can be read
+        bytes32 daiSlot1 = address(daiClone).readStorage(bytes32(1));
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/accounts.html"><strong>Accounts API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="commands"><a class="header" href="#commands">Commands</a></h1>
+<p>Execute external commands. The <code>ffi</code> setting must be enabled on <code>foundry.toml</code> for this module to
+work.</p>
+<pre><code class="language-solidity">import { Test, Command, commands } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    using commands for *;
+
+    function testMyContract() external {
+        // run `echo Hello World`.
+        // There is no need to create a dynamic array for the arguments
+        bytes memory res = commands.run([&quot;echo&quot;, &quot;Hello World&quot;]);
+
+        // A comand can be created to facilitate multiple executions
+        Command memory cmd = commands.create(&quot;echo&quot;).arg(&quot;Hello World&quot;);
+        res = cmd.run();
+        res = cmd.run();
+        res = cmd.run();
+
+        // A base command can be created and then be executed with different arguments
+        Command memory ping = commands.create(&quot;ping&quot;).args([&quot;-c&quot;, &quot;1&quot;]);
+        res = ping.arg(&quot;etherscan.io&quot;).run();
+        res = ping.arg(&quot;arbiscan.io&quot;).run();
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/commands.html"><strong>Commands API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="config"><a class="header" href="#config">Config</a></h1>
+<p>Foundry project configuration stuff.</p>
+<pre><code class="language-solidity">import { Test, config, Rpc } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Obtain the RPC URL from one of the keys configured on `foundry.toml`
+        string memory rpcUrl = config.rpcUrl(&quot;mainnet&quot;);
+
+        // Obtain all the RPCs as [name, url][]
+        string[2][] memory rpcs = config.rpcUrls();
+
+        // Obtain all the RPCs as an array of `Rpc`s 
+        // Rpc { name, url }
+        Rpc[] memory rpcsAsStruct = config.rpcUrlStructs();
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/config.html"><strong>Config API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="console"><a class="header" href="#console">Console</a></h1>
+<p>Print to the console. Uses <code>forge-std/console2.sol</code>.</p>
+<pre><code class="language-solidity">import { Test, console } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Same API as forge-std's console2
+        console.log(&quot;Hello World&quot;);
+        console.log(&quot;Some value: &quot;, uint256(1337));
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="context"><a class="header" href="#context">Context</a></h1>
+<p>Functionality to interact with the current runtime context:</p>
+<ul>
+<li>Block data</li>
+<li>Gas metering</li>
+<li>Forge's <code>expectRevert</code>, <code>expectEmit</code> and <code>mockCall</code> (for an alternative, see
+<a href="modules/./watchers.html"><code>watchers</code></a>)</li>
+<li>Vm state snapshots</li>
+</ul>
+<pre><code class="language-solidity">import { Test, ctx } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Update block state
+        ctx.setBlockTimestamp(123).setBlockNumber(456).setBlockDifficulty(789);
+
+        // Use snapshots
+        uint256 snapshotId = ctx.snapshot();
+        ctx.revertToSnapshot(snapshotId);
+
+        // Enable/disable gas metering
+        ctx.pauseGasMetering();
+        ctx.resumeGasMetering();
+
+        // Use Forge's `expectRevert`
+        ctx.expectRevert();
+        myContract.mayRevert();
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="env"><a class="header" href="#env">Env</a></h1>
+<p>Set and read environmental variables.</p>
+<pre><code class="language-solidity">import { Test, env } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Sets the value of the environment variable `MY_VAR` to `Hello World`
+        env.set(&quot;MY_VAR&quot;, string(&quot;Hello World&quot;));
+
+        // Reads the content of the `MY_VAR` environment variable
+        string memory MY_VAR = env.getString(&quot;MY_VAR&quot;);
+
+        // Reads an environment variable and sets a default value
+        bytes32 foo = env.getBytes32(&quot;FOO&quot;, bytes32(123));
+
+        // Reads an environment variable string as an array of booleans where
+        // the string uses `,` to separate each value
+        bool[] bar = env.getBoolArray(&quot;BAR&quot;, &quot;,&quot;);
+
+        uint256[] memory defaultValue = new uint256[](100);
+        // Reads an environment variable string as an array of uint256 where
+        // the string uses `;` to separate each value and provides a default.
+        uint256[] baz = env.getUintArray(&quot;BAZ&quot;, &quot;;&quot;, defaultValue);
+    }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="events"><a class="header" href="#events">Events</a></h1>
+<p>Provides utitilies to get logs and transform values into their topic representation.</p>
+<pre><code class="language-solidity">import { Test, events, Log } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    using events for *;
+
+    function testMyContract() external {
+        // Gets the topic representation of an `uint256` value
+        bytes32 topic1 = uint256(1).topic();
+        // Gets the topic representation of a `bool` value
+        bytes32 topic2 = false.topic();
+        // Gets the toipic representation of an `address` value
+        bytes32 topic3 = address(1).topic();
+
+        // Start recording logs. Same as `forge-std/Vm.sol:recordLogs`
+        events.recordLogs();
+
+        // Gets the recorded logs. Same as `forge-std/Vm.sol:getRecordedLogs`
+        Log[] memory logs = events.getRecordedLogs();
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/events.html"><strong>Events API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forks"><a class="header" href="#forks">Forks</a></h1>
+<p>Forking functionality.</p>
+<pre><code class="language-solidity">import { Test, forks, Fork } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Alternatively an endpoint can be passed directly.
+        Fork fork = forks.create(&quot;mainnet&quot;);
+
+        // The fork can be created at an specific block
+        fork = forks.createAtBlock(&quot;mainnet&quot;, 16736036);
+
+        // Or right before a transaction
+        fork = forks.createBeforeTx(&quot;mainnet&quot;, 0x9cad524afce3fcd2e84b8ac30c57ba085fcae053e9bf3ee449cd36d511c10f43);
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/forks.html"><strong>Forks API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fs"><a class="header" href="#fs">Fs</a></h1>
+<p>Provides utilities to interact with the filesystem. In order to use this module the
+<code>fs_permissions</code> setting must be set correctly in <code>foundry.toml</code>.</p>
+<pre><code class="language-solidity">import { Test, fs } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Write a string to a file
+        fs.write(&quot;test.txt&quot;, &quot;Hello World&quot;);
+
+        // Write bytes to a file
+        fs.writeBinary(&quot;test.bin&quot;, abi.encodeWithSignature(&quot;test(uint256)&quot;, 1e18));
+
+        // Read a file as a string
+        string memory content = fs.read(&quot;test.txt&quot;);
+
+        // Read a file as bytes
+        bytes memory binContent = fs.readBinary(&quot;test.bin&quot;);
+
+        // Delete files
+        fs.remove(&quot;delete.me&quot;);
+
+        // Copy files
+        fs.copy(&quot;file.original&quot;, &quot;file.backup&quot;);
+
+        // Move files
+        fs.move(&quot;hold.txt&quot;, &quot;hodl.txt&quot;);
+
+        // Check if a file or directory exists
+        if (fs.exists(&quot;some_file.txt&quot;)) {
+            fs.remove(&quot;some_file.txt&quot;);
+        }
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/fs.html"><strong>Fs API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="json"><a class="header" href="#json">Json</a></h1>
+<p>Manipulate JSON data.</p>
+<pre><code class="language-solidity">import { Test, JsonObject, json } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    function testMyContract() external {
+        // Create a JsonObject struct
+        JsonObject memory obj = json.create();
+
+        // Serialize the property `foo` with a value of `true`
+        obj.serialize(&quot;foo&quot;, true);
+
+        // Obtain the serialized Json string
+        expect(obj.serialized).toEqual('{&quot;foo&quot;:true}');
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/json.html"><strong>Json API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strings"><a class="header" href="#strings">Strings</a></h1>
+<p>Convert basic types from / to strings.</p>
+<pre><code class="language-solidity">import { Test, strings } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    using strings for *;
+
+    function testMyContract() external {
+        // Obtain the string representation of uints
+        expect(uint256(1).toString()).toEqual(&quot;1&quot;);
+
+        // Obtain the string representation of booleans
+        expect(true.toString()).toEqual(&quot;true&quot;);
+        expect(false.toString()).toEqual(&quot;false&quot;);
+
+        // Obtain the string representation of an address
+        expect(address(1).toString()).toEqual(&quot;0x0000000000000000000000000000000000000001&quot;)
+
+        // Parse a number string to a `uint256`
+        expect(&quot;1&quot;.parseUint()).toEqual(1);
+
+        // Parse a boolean string to a `bool`
+        expect(&quot;true&quot;.parseBool()).toBeTrue();
+
+        // Parse an address string to an `address`
+        expect(&quot;0x13DFD56424777BAC80070a98Cf83DD82246c2bC0&quot;.parseAddress()).toEqual(0x13DFD56424777BAC80070a98Cf83DD82246c2bC0);
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/strings.html"><strong>Strings API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="watchers"><a class="header" href="#watchers">Watchers</a></h1>
+<p>Monitor contract calls and emitted events.</p>
+<blockquote>
+<p><strong>Important:</strong>
+Watchers work by replacing an address code with a proxy contract that records all calls and events.</p>
+</blockquote>
+<pre><code class="language-solidity">import { Test, events, watchers, expect, any } from &quot;vulcan/test.sol&quot;;
+
+contract TestMyContract is Test {
+    using watchers for *;
+    using events for *;
+
+    function testMyContract() external {
+        MyContract mc = new MyContract();
+
+        // Start watching the `mc` contract.
+        // This will replace the `mc` contract code with a `proxy`
+        address(mc).watch().captureReverts();
+
+        mc.doSomething();
+        mc.doSomethingElse();
+
+        // Two calls were made to `mc`
+        expect(address(mc).calls().length).toEqual(2);
+        // First call reverted with a message
+        expect(address(mc).getCall(0)).toHaveRevertedWith(&quot;Something went wrong&quot;);
+        // Second call emitted an event
+        expect(address(mc).getCall(1)).toHaveEmitted(
+            &quot;SomeEvent(address,bytes32,uint256)&quot;,
+            [address(1).topic(), any()], // Event topics (indexed arguments)
+            abi.encode(123) // Event data
+        );
+
+        // Stop watching the `mc` contract.
+        // The `mc` contract code returns to the original state.
+        address(mc).stopWatcher();
+    }
+}
+</code></pre>
+<p><a href="modules/../reference/modules/watchers.html"><strong>Watchers API reference</strong></a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="modules-1"><a class="header" href="#modules-1">Modules</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="accounts-1"><a class="header" href="#accounts-1">Accounts</a></h1>
+<h4 id="readstorageaddress-who-bytes32-slot--bytes32"><a class="header" href="#readstorageaddress-who-bytes32-slot--bytes32"><strong><code>readStorage(address who, bytes32 slot) → (bytes32)</code></strong></a></h4>
+<p>Reads the storage at the specified <code>slot</code> for the given <code>who</code> address and returns the content.</p>
+<h4 id="signuint256-privkey-bytes32-digest--uint8-bytes32-bytes32"><a class="header" href="#signuint256-privkey-bytes32-digest--uint8-bytes32-bytes32"><strong><code>sign(uint256 privKey, bytes32 digest) → (uint8, bytes32, bytes32)</code></strong></a></h4>
+<p>Signs the specified <code>digest</code> using the provided <code>privKey</code> and returns the signature in the form of <code>(v, r, s)</code>.</p>
+<h4 id="deriveuint256-privkey--address"><a class="header" href="#deriveuint256-privkey--address"><strong><code>derive(uint256 privKey) → (address)</code></strong></a></h4>
+<p>Derives the Ethereum address corresponding to the provided <code>privKey</code>.</p>
+<h4 id="derivekeystring-mnemonicorpath-uint32-index--uint256"><a class="header" href="#derivekeystring-mnemonicorpath-uint32-index--uint256"><strong><code>deriveKey(string mnemonicOrPath, uint32 index) → (uint256)</code></strong></a></h4>
+<p>Derives the private key corresponding to the specified <code>mnemonicOrPath</code> and <code>index</code>.</p>
+<h4 id="derivekeystring-mnemonicorpath-string-derivationpath-uint32-index--uint256"><a class="header" href="#derivekeystring-mnemonicorpath-string-derivationpath-uint32-index--uint256"><strong><code>deriveKey(string mnemonicOrPath, string derivationPath, uint32 index) → (uint256)</code></strong></a></h4>
+<p>Derives the private key corresponding to the specified <code>mnemonicOrPath</code>, <code>derivationPath</code>, and <code>index</code>.</p>
+<h4 id="rememberkeyuint256-privkey--address"><a class="header" href="#rememberkeyuint256-privkey--address"><strong><code>rememberKey(uint256 privKey) → (address)</code></strong></a></h4>
+<p>Adds the specified <code>privKey</code> to the local forge wallet.</p>
+<h4 id="getnonceaddress-who--uint64"><a class="header" href="#getnonceaddress-who--uint64"><strong><code>getNonce(address who) → (uint64)</code></strong></a></h4>
+<p>Returns the current <code>nonce</code> of the specified <code>who</code> address.</p>
+<h4 id="recordstorage"><a class="header" href="#recordstorage"><strong><code>recordStorage()</code></strong></a></h4>
+<p>Starts recording all storage reads and writes for later analysis.</p>
+<h4 id="getstorageaccessesaddress-who--bytes32-reads-bytes32-writes"><a class="header" href="#getstorageaccessesaddress-who--bytes32-reads-bytes32-writes"><strong><code>getStorageAccesses(address who) → (bytes32[] reads, bytes32[] writes)</code></strong></a></h4>
+<p>Obtains an array of slots that have been read and written for the specified address <code>who</code>.</p>
+<h4 id="labeladdress-who-string-lbl--address"><a class="header" href="#labeladdress-who-string-lbl--address"><strong><code>label(address who, string lbl) → (address)</code></strong></a></h4>
+<p>Adds a label to the specified address <code>who</code> for identification purposes in debug traces.</p>
+<h4 id="createstring-name--address"><a class="header" href="#createstring-name--address"><strong><code>create(string name) → (address)</code></strong></a></h4>
+<p>Creates an address using the hash of the specified <code>name</code> as the private key and adds a label to the address.</p>
+<h4 id="createstring-name-string-lbl--address"><a class="header" href="#createstring-name-string-lbl--address"><strong><code>create(string name, string lbl) → (address)</code></strong></a></h4>
+<p>Creates an address using the hash of the specified <code>name</code> as the private key and adds a label to the address.</p>
+<h4 id="setstorageaddress-self-bytes32-slot-bytes32-value--address"><a class="header" href="#setstorageaddress-self-bytes32-slot-bytes32-value--address"><strong><code>setStorage(address self, bytes32 slot, bytes32 value) → (address)</code></strong></a></h4>
+<p>Sets the specified <code>slot</code> in the storage of the given <code>self</code> address to the provided <code>value</code>.</p>
+<h4 id="setnonceaddress-self-uint64-n--address"><a class="header" href="#setnonceaddress-self-uint64-n--address"><strong><code>setNonce(address self, uint64 n) → (address)</code></strong></a></h4>
+<p>Sets the nonce of the given <code>self</code> address to the provided value <code>n</code>.</p>
+<h4 id="impersonateonceaddress-self--address"><a class="header" href="#impersonateonceaddress-self--address"><strong><code>impersonateOnce(address self) → (address)</code></strong></a></h4>
+<p>Sets the <code>msg.sender</code> of the next call to <code>self</code>.</p>
+<h4 id="impersonateaddress-self--address"><a class="header" href="#impersonateaddress-self--address"><strong><code>impersonate(address self) → (address)</code></strong></a></h4>
+<p>Sets the <code>msg.sender</code> of all subsequent calls to <code>self</code> until <code>stopImpersonate</code> is called</p>
+<h4 id="impersonateonceaddress-self-address-origin--address"><a class="header" href="#impersonateonceaddress-self-address-origin--address"><strong><code>impersonateOnce(address self, address origin) → (address)</code></strong></a></h4>
+<p>Sets the <code>msg.sender</code> of the next call to <code>self</code> and the <code>tx.origin</code>
+to <code>origin</code>.</p>
+<h4 id="impersonateaddress-self-address-origin--address"><a class="header" href="#impersonateaddress-self-address-origin--address"><strong><code>impersonate(address self, address origin) → (address)</code></strong></a></h4>
+<p>Sets the <code>msg.sender</code> and <code>tx.origin</code> of all the subsequent calls to <code>self</code> and <code>origin</code>
+respectively until <code>stopImpersonate</code> is called.</p>
+<h4 id="stopimpersonate"><a class="header" href="#stopimpersonate"><strong><code>stopImpersonate()</code></strong></a></h4>
+<p>Resets the values of <code>msg.sender</code> and <code>tx.origin</code> to the original values.</p>
+<h4 id="setbalanceaddress-self-uint256-bal--address"><a class="header" href="#setbalanceaddress-self-uint256-bal--address"><strong><code>setBalance(address self, uint256 bal) → (address)</code></strong></a></h4>
+<p>Sets the balance of an address and returns the address that was modified.</p>
+<h4 id="minttokenaddress-self-address-token-uint256-amount--address"><a class="header" href="#minttokenaddress-self-address-token-uint256-amount--address"><strong><code>mintToken(address self, address token, uint256 amount) → (address)</code></strong></a></h4>
+<p>Mints an amount of tokens to an address. This operation modifies the total supply of the token.
+self The address that will own the tokens.
+token The token to mint.
+amount The amount of tokens to mint.</p>
+<h4 id="burntokenaddress-self-address-token-uint256-amount--address"><a class="header" href="#burntokenaddress-self-address-token-uint256-amount--address"><strong><code>burnToken(address self, address token, uint256 amount) → (address)</code></strong></a></h4>
+<p>Burns an amount of tokens from an address.This operation modifies the total supply of the token.
+self The address that owns the tokens.
+token The token to burn.
+amount The amount of tokens to burn.</p>
+<h4 id="settokenbalanceaddress-self-address-token-uint256-bal--address"><a class="header" href="#settokenbalanceaddress-self-address-token-uint256-bal--address"><strong><code>setTokenBalance(address self, address token, uint256 bal) → (address)</code></strong></a></h4>
+<p>Sets the token balance of an address.</p>
+<h4 id="settotalsupplyaddress-token-uint256-totalsupply-private--address"><a class="header" href="#settotalsupplyaddress-token-uint256-totalsupply-private--address"><strong><code>setTotalSupply(address token, uint256 totalSupply) private → (address)</code></strong></a></h4>
+<p>Sets the token total supply of a token.</p>
+<h4 id="setcodeaddress-self-bytes-code--address"><a class="header" href="#setcodeaddress-self-bytes-code--address"><strong><code>setCode(address self, bytes code) → (address)</code></strong></a></h4>
+<p>Sets the code of an address.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="commands-1"><a class="header" href="#commands-1">Commands</a></h1>
+<h4 id="createstring-input--command"><a class="header" href="#createstring-input--command"><strong><code>create(string input) → (Command)</code></strong></a></h4>
+<p>Creates a new <code>Command</code> struct using the provided <code>input</code> as the executable.</p>
+<h4 id="argcommand-self-string-_arg--command"><a class="header" href="#argcommand-self-string-_arg--command"><strong><code>arg(Command self, string _arg) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string-_args--command"><a class="header" href="#argscommand-self-string-_args--command"><strong><code>args(Command self, string[] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string1-_args--command"><a class="header" href="#argscommand-self-string1-_args--command"><strong><code>args(Command self, string[1] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string2-_args--command"><a class="header" href="#argscommand-self-string2-_args--command"><strong><code>args(Command self, string[2] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string3-_args--command"><a class="header" href="#argscommand-self-string3-_args--command"><strong><code>args(Command self, string[3] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string4-_args--command"><a class="header" href="#argscommand-self-string4-_args--command"><strong><code>args(Command self, string[4] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string5-_args--command"><a class="header" href="#argscommand-self-string5-_args--command"><strong><code>args(Command self, string[5] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string6-_args--command"><a class="header" href="#argscommand-self-string6-_args--command"><strong><code>args(Command self, string[6] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string7-_args--command"><a class="header" href="#argscommand-self-string7-_args--command"><strong><code>args(Command self, string[7] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string8-_args--command"><a class="header" href="#argscommand-self-string8-_args--command"><strong><code>args(Command self, string[8] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string9-_args--command"><a class="header" href="#argscommand-self-string9-_args--command"><strong><code>args(Command self, string[9] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string10-_args--command"><a class="header" href="#argscommand-self-string10-_args--command"><strong><code>args(Command self, string[10] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string11-_args--command"><a class="header" href="#argscommand-self-string11-_args--command"><strong><code>args(Command self, string[11] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string12-_args--command"><a class="header" href="#argscommand-self-string12-_args--command"><strong><code>args(Command self, string[12] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string13-_args--command"><a class="header" href="#argscommand-self-string13-_args--command"><strong><code>args(Command self, string[13] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string14-_args--command"><a class="header" href="#argscommand-self-string14-_args--command"><strong><code>args(Command self, string[14] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string15-_args--command"><a class="header" href="#argscommand-self-string15-_args--command"><strong><code>args(Command self, string[15] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string16-_args--command"><a class="header" href="#argscommand-self-string16-_args--command"><strong><code>args(Command self, string[16] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string17-_args--command"><a class="header" href="#argscommand-self-string17-_args--command"><strong><code>args(Command self, string[17] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string18-_args--command"><a class="header" href="#argscommand-self-string18-_args--command"><strong><code>args(Command self, string[18] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string19-_args--command"><a class="header" href="#argscommand-self-string19-_args--command"><strong><code>args(Command self, string[19] _args) → (Command)</code></strong></a></h4>
+<h4 id="argscommand-self-string20-_args--command"><a class="header" href="#argscommand-self-string20-_args--command"><strong><code>args(Command self, string[20] _args) → (Command)</code></strong></a></h4>
+<h4 id="runcommand-self--bytes"><a class="header" href="#runcommand-self--bytes"><strong><code>run(Command self) → (bytes)</code></strong></a></h4>
+<p>Runs a command using the specified <code>Command</code> struct as parameters and returns the result.</p>
+<h4 id="runstring-inputs--bytes"><a class="header" href="#runstring-inputs--bytes"><strong><code>run(string[] inputs) → (bytes)</code></strong></a></h4>
+<p>Runs a command with the specified <code>inputs</code> as parameters and returns the result.</p>
+<h4 id="runstring1-inputs--bytes"><a class="header" href="#runstring1-inputs--bytes"><strong><code>run(string[1] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring2-inputs--bytes"><a class="header" href="#runstring2-inputs--bytes"><strong><code>run(string[2] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring3-inputs--bytes"><a class="header" href="#runstring3-inputs--bytes"><strong><code>run(string[3] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring4-inputs--bytes"><a class="header" href="#runstring4-inputs--bytes"><strong><code>run(string[4] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring5-inputs--bytes"><a class="header" href="#runstring5-inputs--bytes"><strong><code>run(string[5] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring6-inputs--bytes"><a class="header" href="#runstring6-inputs--bytes"><strong><code>run(string[6] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring7-inputs--bytes"><a class="header" href="#runstring7-inputs--bytes"><strong><code>run(string[7] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring8-inputs--bytes"><a class="header" href="#runstring8-inputs--bytes"><strong><code>run(string[8] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring9-inputs--bytes"><a class="header" href="#runstring9-inputs--bytes"><strong><code>run(string[9] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring10-inputs--bytes"><a class="header" href="#runstring10-inputs--bytes"><strong><code>run(string[10] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring11-inputs--bytes"><a class="header" href="#runstring11-inputs--bytes"><strong><code>run(string[11] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring12-inputs--bytes"><a class="header" href="#runstring12-inputs--bytes"><strong><code>run(string[12] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring13-inputs--bytes"><a class="header" href="#runstring13-inputs--bytes"><strong><code>run(string[13] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring14-inputs--bytes"><a class="header" href="#runstring14-inputs--bytes"><strong><code>run(string[14] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring15-inputs--bytes"><a class="header" href="#runstring15-inputs--bytes"><strong><code>run(string[15] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring16-inputs--bytes"><a class="header" href="#runstring16-inputs--bytes"><strong><code>run(string[16] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring17-inputs--bytes"><a class="header" href="#runstring17-inputs--bytes"><strong><code>run(string[17] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring18-inputs--bytes"><a class="header" href="#runstring18-inputs--bytes"><strong><code>run(string[18] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring19-inputs--bytes"><a class="header" href="#runstring19-inputs--bytes"><strong><code>run(string[19] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="runstring20-inputs--bytes"><a class="header" href="#runstring20-inputs--bytes"><strong><code>run(string[20] inputs) → (bytes)</code></strong></a></h4>
+<h4 id="todynamicstring1-inputs--string-_inputs"><a class="header" href="#todynamicstring1-inputs--string-_inputs"><strong><code>toDynamic(string[1] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring2-inputs--string-_inputs"><a class="header" href="#todynamicstring2-inputs--string-_inputs"><strong><code>toDynamic(string[2] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring3-inputs--string-_inputs"><a class="header" href="#todynamicstring3-inputs--string-_inputs"><strong><code>toDynamic(string[3] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring4-inputs--string-_inputs"><a class="header" href="#todynamicstring4-inputs--string-_inputs"><strong><code>toDynamic(string[4] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring5-inputs--string-_inputs"><a class="header" href="#todynamicstring5-inputs--string-_inputs"><strong><code>toDynamic(string[5] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring6-inputs--string-_inputs"><a class="header" href="#todynamicstring6-inputs--string-_inputs"><strong><code>toDynamic(string[6] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring7-inputs--string-_inputs"><a class="header" href="#todynamicstring7-inputs--string-_inputs"><strong><code>toDynamic(string[7] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring8-inputs--string-_inputs"><a class="header" href="#todynamicstring8-inputs--string-_inputs"><strong><code>toDynamic(string[8] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring9-inputs--string-_inputs"><a class="header" href="#todynamicstring9-inputs--string-_inputs"><strong><code>toDynamic(string[9] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring10-inputs--string-_inputs"><a class="header" href="#todynamicstring10-inputs--string-_inputs"><strong><code>toDynamic(string[10] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring11-inputs--string-_inputs"><a class="header" href="#todynamicstring11-inputs--string-_inputs"><strong><code>toDynamic(string[11] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring12-inputs--string-_inputs"><a class="header" href="#todynamicstring12-inputs--string-_inputs"><strong><code>toDynamic(string[12] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring13-inputs--string-_inputs"><a class="header" href="#todynamicstring13-inputs--string-_inputs"><strong><code>toDynamic(string[13] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring14-inputs--string-_inputs"><a class="header" href="#todynamicstring14-inputs--string-_inputs"><strong><code>toDynamic(string[14] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring15-inputs--string-_inputs"><a class="header" href="#todynamicstring15-inputs--string-_inputs"><strong><code>toDynamic(string[15] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring16-inputs--string-_inputs"><a class="header" href="#todynamicstring16-inputs--string-_inputs"><strong><code>toDynamic(string[16] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring17-inputs--string-_inputs"><a class="header" href="#todynamicstring17-inputs--string-_inputs"><strong><code>toDynamic(string[17] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring18-inputs--string-_inputs"><a class="header" href="#todynamicstring18-inputs--string-_inputs"><strong><code>toDynamic(string[18] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring19-inputs--string-_inputs"><a class="header" href="#todynamicstring19-inputs--string-_inputs"><strong><code>toDynamic(string[19] inputs) → (string[] _inputs)</code></strong></a></h4>
+<h4 id="todynamicstring20-inputs--string-_inputs"><a class="header" href="#todynamicstring20-inputs--string-_inputs"><strong><code>toDynamic(string[20] inputs) → (string[] _inputs)</code></strong></a></h4>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="config-1"><a class="header" href="#config-1">Config</a></h1>
+<h4 id="rpcurlstring-name--string-"><a class="header" href="#rpcurlstring-name--string-"><strong><code>rpcUrl(string name) → (string )</code></strong></a></h4>
+<p>Obtains a specific RPC from the configuration by name.</p>
+<h4 id="rpcurls--string2-"><a class="header" href="#rpcurls--string2-"><strong><code>rpcUrls() → (string[2][] )</code></strong></a></h4>
+<p>Obtains all the RPCs from the configuration.</p>
+<h4 id="rpcurlstructs--rpc-rpcs"><a class="header" href="#rpcurlstructs--rpc-rpcs"><strong><code>rpcUrlStructs() → (Rpc[] rpcs)</code></strong></a></h4>
+<p>Obtains all the RPCs from the configuration.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="context-1"><a class="header" href="#context-1">Context</a></h1>
+<h4 id="broadcast"><a class="header" href="#broadcast"><strong><code>broadcast()</code></strong></a></h4>
+<h4 id="broadcastaddress-from"><a class="header" href="#broadcastaddress-from"><strong><code>broadcast(address from)</code></strong></a></h4>
+<h4 id="broadcastuint256-privkey"><a class="header" href="#broadcastuint256-privkey"><strong><code>broadcast(uint256 privKey)</code></strong></a></h4>
+<h4 id="startbroadcast"><a class="header" href="#startbroadcast"><strong><code>startBroadcast()</code></strong></a></h4>
+<h4 id="startbroadcastaddress-from"><a class="header" href="#startbroadcastaddress-from"><strong><code>startBroadcast(address from)</code></strong></a></h4>
+<h4 id="startbroadcastuint256-privkey"><a class="header" href="#startbroadcastuint256-privkey"><strong><code>startBroadcast(uint256 privKey)</code></strong></a></h4>
+<h4 id="stopbroadcast"><a class="header" href="#stopbroadcast"><strong><code>stopBroadcast()</code></strong></a></h4>
+<h4 id="assumebool-condition"><a class="header" href="#assumebool-condition"><strong><code>assume(bool condition)</code></strong></a></h4>
+<h4 id="pausegasmetering"><a class="header" href="#pausegasmetering"><strong><code>pauseGasMetering()</code></strong></a></h4>
+<h4 id="resumegasmetering"><a class="header" href="#resumegasmetering"><strong><code>resumeGasMetering()</code></strong></a></h4>
+<h4 id="isstaticcall--bool"><a class="header" href="#isstaticcall--bool"><strong><code>isStaticcall() → (bool)</code></strong></a></h4>
+<p>Checks whether the current call is a static call or not.</p>
+<h4 id="setblocktimestampcontext-self-uint256-ts--context"><a class="header" href="#setblocktimestampcontext-self-uint256-ts--context"><strong><code>setBlockTimestamp(Context self, uint256 ts) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.timestamp</code> to <code>ts</code></p>
+<h4 id="setblocktimestampuint256-ts--context"><a class="header" href="#setblocktimestampuint256-ts--context"><strong><code>setBlockTimestamp(uint256 ts) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.timestamp</code> to <code>ts</code></p>
+<h4 id="setblocknumbercontext-self-uint256-blocknumber--context"><a class="header" href="#setblocknumbercontext-self-uint256-blocknumber--context"><strong><code>setBlockNumber(Context self, uint256 blockNumber) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.number</code> to <code>blockNumber</code></p>
+<h4 id="setblocknumberuint256-blocknumber--context"><a class="header" href="#setblocknumberuint256-blocknumber--context"><strong><code>setBlockNumber(uint256 blockNumber) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.number</code> to <code>blockNumber</code></p>
+<h4 id="setblockbasefeecontext-self-uint256-basefee--context"><a class="header" href="#setblockbasefeecontext-self-uint256-basefee--context"><strong><code>setBlockBaseFee(Context self, uint256 baseFee) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.basefee</code> to <code>baseFee</code></p>
+<h4 id="setblockbasefeeuint256-basefee--context"><a class="header" href="#setblockbasefeeuint256-basefee--context"><strong><code>setBlockBaseFee(uint256 baseFee) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.basefee</code> to <code>baseFee</code></p>
+<h4 id="setblockdifficultycontext-self-uint256-difficulty--context"><a class="header" href="#setblockdifficultycontext-self-uint256-difficulty--context"><strong><code>setBlockDifficulty(Context self, uint256 difficulty) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.difficulty</code> to <code>difficulty</code></p>
+<h4 id="setblockdifficultyuint256-difficulty--context"><a class="header" href="#setblockdifficultyuint256-difficulty--context"><strong><code>setBlockDifficulty(uint256 difficulty) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.difficulty</code> to <code>difficulty</code></p>
+<h4 id="setchainidcontext-self-uint64-chainid--context"><a class="header" href="#setchainidcontext-self-uint64-chainid--context"><strong><code>setChainId(Context self, uint64 chainId) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.chainid</code> to <code>chainId</code></p>
+<h4 id="setchainiduint64-chainid--context"><a class="header" href="#setchainiduint64-chainid--context"><strong><code>setChainId(uint64 chainId) → (Context)</code></strong></a></h4>
+<p>sets the <code>block.chainid</code> to <code>chainId</code></p>
+<h4 id="setblockcoinbasecontext-self-address-who--context"><a class="header" href="#setblockcoinbasecontext-self-address-who--context"><strong><code>setBlockCoinbase(Context self, address who) → (Context)</code></strong></a></h4>
+<p>Sets the block coinbase to <code>who</code>.</p>
+<h4 id="setblockcoinbaseaddress-who--context"><a class="header" href="#setblockcoinbaseaddress-who--context"><strong><code>setBlockCoinbase(address who) → (Context)</code></strong></a></h4>
+<p>Sets the block coinbase to <code>who</code>.</p>
+<h4 id="expectrevertbytes-revertdata"><a class="header" href="#expectrevertbytes-revertdata"><strong><code>expectRevert(bytes revertData)</code></strong></a></h4>
+<p>Function used to check whether the next call reverts or not.</p>
+<h4 id="expectrevertbytes4-revertdata"><a class="header" href="#expectrevertbytes4-revertdata"><strong><code>expectRevert(bytes4 revertData)</code></strong></a></h4>
+<p>Function used to check whether the next call reverts or not.</p>
+<h4 id="expectrevert"><a class="header" href="#expectrevert"><strong><code>expectRevert()</code></strong></a></h4>
+<p>Function used to check whether the next call reverts or not.</p>
+<h4 id="expectemitbool-checktopic1-bool-checktopic2-bool-checktopic3-bool-checkdata"><a class="header" href="#expectemitbool-checktopic1-bool-checktopic2-bool-checktopic3-bool-checkdata"><strong><code>expectEmit(bool checkTopic1, bool checkTopic2, bool checkTopic3, bool checkData)</code></strong></a></h4>
+<p>Checks if an event was emitted with the given properties.</p>
+<h4 id="expectemitbool-checktopic1-bool-checktopic2-bool-checktopic3-bool-checkdata-address-emitter"><a class="header" href="#expectemitbool-checktopic1-bool-checktopic2-bool-checktopic3-bool-checkdata-address-emitter"><strong><code>expectEmit(bool checkTopic1, bool checkTopic2, bool checkTopic3, bool checkData, address emitter)</code></strong></a></h4>
+<p>Checks if an event was emitted with the given properties.</p>
+<h4 id="mockcalladdress-callee-bytes-data-bytes-returndata"><a class="header" href="#mockcalladdress-callee-bytes-data-bytes-returndata"><strong><code>mockCall(address callee, bytes data, bytes returnData)</code></strong></a></h4>
+<p>Function to mock a call to a specified address.</p>
+<h4 id="mockcalladdress-callee-uint256-msgvalue-bytes-data-bytes-returndata"><a class="header" href="#mockcalladdress-callee-uint256-msgvalue-bytes-data-bytes-returndata"><strong><code>mockCall(address callee, uint256 msgValue, bytes data, bytes returnData)</code></strong></a></h4>
+<p>Function to mock a call to a specified address.</p>
+<h4 id="clearmockedcalls"><a class="header" href="#clearmockedcalls"><strong><code>clearMockedCalls()</code></strong></a></h4>
+<p>Function to clear all the mocked calls.</p>
+<h4 id="expectcalladdress-callee-bytes-data"><a class="header" href="#expectcalladdress-callee-bytes-data"><strong><code>expectCall(address callee, bytes data)</code></strong></a></h4>
+<p>Used to check if a call to <code>callee</code> with <code>data</code> was made.</p>
+<h4 id="expectcalladdress-callee-uint256-msgvalue-bytes-data"><a class="header" href="#expectcalladdress-callee-uint256-msgvalue-bytes-data"><strong><code>expectCall(address callee, uint256 msgValue, bytes data)</code></strong></a></h4>
+<p>Used to check if a call to <code>callee</code> with <code>data</code> and <code>msgValue</code> was made.</p>
+<h4 id="snapshotcontext--uint256"><a class="header" href="#snapshotcontext--uint256"><strong><code>snapshot(Context) → (uint256)</code></strong></a></h4>
+<p>Takes a snapshot of the current state of the vm and returns an identifier.</p>
+<h4 id="snapshot--uint256"><a class="header" href="#snapshot--uint256"><strong><code>snapshot() → (uint256)</code></strong></a></h4>
+<p>Takes a snapshot of the current state of the vm and returns an identifier.</p>
+<h4 id="reverttosnapshotcontext-uint256-snapshotid--bool"><a class="header" href="#reverttosnapshotcontext-uint256-snapshotid--bool"><strong><code>revertToSnapshot(Context, uint256 snapshotId) → (bool)</code></strong></a></h4>
+<p>Reverts the state of the vm to the snapshot with id <code>snapshotId</code>.</p>
+<h4 id="reverttosnapshotuint256-snapshotid--bool"><a class="header" href="#reverttosnapshotuint256-snapshotid--bool"><strong><code>revertToSnapshot(uint256 snapshotId) → (bool)</code></strong></a></h4>
+<p>Reverts the state of the vm to the snapshot with id <code>snapshotId</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="env-1"><a class="header" href="#env-1">Env</a></h1>
+<h4 id="setstring-name-string-value"><a class="header" href="#setstring-name-string-value"><strong><code>set(string name, string value)</code></strong></a></h4>
+<p>sets the value of the  environment variable with name <code>name</code> to <code>value</code>.</p>
+<h4 id="getboolstring-name--bool"><a class="header" href="#getboolstring-name--bool"><strong><code>getBool(string name) → (bool)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bool</code>.</p>
+<h4 id="getuintstring-name--uint256"><a class="header" href="#getuintstring-name--uint256"><strong><code>getUint(string name) → (uint256)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>uint256</code>.</p>
+<h4 id="getintstring-name--int256"><a class="header" href="#getintstring-name--int256"><strong><code>getInt(string name) → (int256)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>int256</code>.</p>
+<h4 id="getaddressstring-name--address"><a class="header" href="#getaddressstring-name--address"><strong><code>getAddress(string name) → (address)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>address</code>.</p>
+<h4 id="getbytes32string-name--bytes32"><a class="header" href="#getbytes32string-name--bytes32"><strong><code>getBytes32(string name) → (bytes32)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes32</code>.</p>
+<h4 id="getstringstring-name--string-"><a class="header" href="#getstringstring-name--string-"><strong><code>getString(string name) → (string )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>string</code>.</p>
+<h4 id="getbytesstring-name--bytes-"><a class="header" href="#getbytesstring-name--bytes-"><strong><code>getBytes(string name) → (bytes )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes</code>.</p>
+<h4 id="getboolarraystring-name-string-delim--bool-"><a class="header" href="#getboolarraystring-name-string-delim--bool-"><strong><code>getBoolArray(string name, string delim) → (bool[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bool[]</code>.</p>
+<h4 id="getuintarraystring-name-string-delim--uint256-"><a class="header" href="#getuintarraystring-name-string-delim--uint256-"><strong><code>getUintArray(string name, string delim) → (uint256[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>uint256[]</code>.</p>
+<h4 id="getintarraystring-name-string-delim--int256-"><a class="header" href="#getintarraystring-name-string-delim--int256-"><strong><code>getIntArray(string name, string delim) → (int256[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>int256[]</code>.</p>
+<h4 id="getaddressarraystring-name-string-delim--address-"><a class="header" href="#getaddressarraystring-name-string-delim--address-"><strong><code>getAddressArray(string name, string delim) → (address[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>address[]</code>.</p>
+<h4 id="getbytes32arraystring-name-string-delim--bytes32-"><a class="header" href="#getbytes32arraystring-name-string-delim--bytes32-"><strong><code>getBytes32Array(string name, string delim) → (bytes32[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes32[]</code>.</p>
+<h4 id="getstringarraystring-name-string-delim--string-"><a class="header" href="#getstringarraystring-name-string-delim--string-"><strong><code>getStringArray(string name, string delim) → (string[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>string[]</code>.</p>
+<h4 id="getbytesarraystring-name-string-delim--bytes-"><a class="header" href="#getbytesarraystring-name-string-delim--bytes-"><strong><code>getBytesArray(string name, string delim) → (bytes[] )</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes[]</code>.</p>
+<h4 id="getboolstring-name-bool-defaultvalue--bool-value"><a class="header" href="#getboolstring-name-bool-defaultvalue--bool-value"><strong><code>getBool(string name, bool defaultValue) → (bool value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bool</code>.</p>
+<h4 id="getuintstring-name-uint256-defaultvalue-external--uint256-value"><a class="header" href="#getuintstring-name-uint256-defaultvalue-external--uint256-value"><strong><code>getUint(string name, uint256 defaultValue) external → (uint256 value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>uint256</code>.</p>
+<h4 id="getintstring-name-int256-defaultvalue-external--int256-value"><a class="header" href="#getintstring-name-int256-defaultvalue-external--int256-value"><strong><code>getInt(string name, int256 defaultValue) external → (int256 value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>int256</code>.</p>
+<h4 id="getaddressstring-name-address-defaultvalue-external--address-value"><a class="header" href="#getaddressstring-name-address-defaultvalue-external--address-value"><strong><code>getAddress(string name, address defaultValue) external → (address value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>address</code>.</p>
+<h4 id="getbytes32string-name-bytes32-defaultvalue-external--bytes32-value"><a class="header" href="#getbytes32string-name-bytes32-defaultvalue-external--bytes32-value"><strong><code>getBytes32(string name, bytes32 defaultValue) external → (bytes32 value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes32</code>.</p>
+<h4 id="getstringstring-name-string-defaultvalue-external--string-value"><a class="header" href="#getstringstring-name-string-defaultvalue-external--string-value"><strong><code>getString(string name, string defaultValue) external → (string value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>string</code>.</p>
+<h4 id="getbytesstring-name-bytes-defaultvalue-external--bytes-value"><a class="header" href="#getbytesstring-name-bytes-defaultvalue-external--bytes-value"><strong><code>getBytes(string name, bytes defaultValue) external → (bytes value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes</code>.</p>
+<h4 id="getboolarraystring-name-string-delim-bool-defaultvalue-external--bool-value"><a class="header" href="#getboolarraystring-name-string-delim-bool-defaultvalue-external--bool-value"><strong><code>getBoolArray(string name, string delim, bool[] defaultValue) external → (bool[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bool[]</code>.</p>
+<h4 id="getuintarraystring-name-string-delim-uint256-defaultvalue-external--uint256-value"><a class="header" href="#getuintarraystring-name-string-delim-uint256-defaultvalue-external--uint256-value"><strong><code>getUintArray(string name, string delim, uint256[] defaultValue) external → (uint256[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>uint256[]</code>.</p>
+<h4 id="getintarraystring-name-string-delim-int256-defaultvalue-external--int256-value"><a class="header" href="#getintarraystring-name-string-delim-int256-defaultvalue-external--int256-value"><strong><code>getIntArray(string name, string delim, int256[] defaultValue) external → (int256[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>int256[]</code>.</p>
+<h4 id="getaddressarraystring-name-string-delim-address-defaultvalue-external--address-value"><a class="header" href="#getaddressarraystring-name-string-delim-address-defaultvalue-external--address-value"><strong><code>getAddressArray(string name, string delim, address[] defaultValue) external → (address[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>address[]</code>.</p>
+<h4 id="getbytes32arraystring-name-string-delim-bytes32-defaultvalue-external--bytes32-value"><a class="header" href="#getbytes32arraystring-name-string-delim-bytes32-defaultvalue-external--bytes32-value"><strong><code>getBytes32Array(string name, string delim, bytes32[] defaultValue) external → (bytes32[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes32[]</code>.</p>
+<h4 id="getstringarraystring-name-string-delim-string-defaultvalue-external--string-value"><a class="header" href="#getstringarraystring-name-string-delim-string-defaultvalue-external--string-value"><strong><code>getStringArray(string name, string delim, string[] defaultValue) external → (string[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>string[]</code>.</p>
+<h4 id="getbytesarraystring-name-string-delim-bytes-defaultvalue-external--bytes-value"><a class="header" href="#getbytesarraystring-name-string-delim-bytes-defaultvalue-external--bytes-value"><strong><code>getBytesArray(string name, string delim, bytes[] defaultValue) external → (bytes[] value)</code></strong></a></h4>
+<p>Reads the environment variable with name <code>name</code> and returns the value as <code>bytes[]</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="events-1"><a class="header" href="#events-1">Events</a></h1>
+<h4 id="todynamicbytes321-topics--bytes32-_topics"><a class="header" href="#todynamicbytes321-topics--bytes32-_topics"><strong><code>toDynamic(bytes32[1] topics) → (bytes32[] _topics)</code></strong></a></h4>
+<p>Transform a fixed array of <code>bytes32</code> to a dynamic array of <code>bytes32</code>.</p>
+<h4 id="todynamicbytes322-topics--bytes32-_topics"><a class="header" href="#todynamicbytes322-topics--bytes32-_topics"><strong><code>toDynamic(bytes32[2] topics) → (bytes32[] _topics)</code></strong></a></h4>
+<p>Transform a fixed array of <code>bytes32</code> to a dynamic array of <code>bytes32</code>.</p>
+<h4 id="todynamicbytes323-topics--bytes32-_topics"><a class="header" href="#todynamicbytes323-topics--bytes32-_topics"><strong><code>toDynamic(bytes32[3] topics) → (bytes32[] _topics)</code></strong></a></h4>
+<p>Transform a fixed array of <code>bytes32</code> to a dynamic array of <code>bytes32</code>.</p>
+<h4 id="todynamicbytes324-topics--bytes32-_topics"><a class="header" href="#todynamicbytes324-topics--bytes32-_topics"><strong><code>toDynamic(bytes32[4] topics) → (bytes32[] _topics)</code></strong></a></h4>
+<p>Transform a fixed array of <code>bytes32</code> to a dynamic array of <code>bytes32</code>.</p>
+<h4 id="topicuint256-_param--bytes32"><a class="header" href="#topicuint256-_param--bytes32"><strong><code>topic(uint256 _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of an <code>uint256</code> parameter.</p>
+<h4 id="topicstring-_param--bytes32"><a class="header" href="#topicstring-_param--bytes32"><strong><code>topic(string _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of a <code>string</code> parameter.</p>
+<h4 id="topicaddress-_param--bytes32"><a class="header" href="#topicaddress-_param--bytes32"><strong><code>topic(address _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of an <code>address</code> parameter.</p>
+<h4 id="topicbytes32-_param--bytes32"><a class="header" href="#topicbytes32-_param--bytes32"><strong><code>topic(bytes32 _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of a <code>bytes32</code> parameter.</p>
+<h4 id="topicbytes-_param--bytes32"><a class="header" href="#topicbytes-_param--bytes32"><strong><code>topic(bytes _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of a <code>bytes</code> parameter.</p>
+<h4 id="topicbool-_param--bytes32"><a class="header" href="#topicbool-_param--bytes32"><strong><code>topic(bool _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of a <code>bool</code> parameter.</p>
+<h4 id="topicint256-_param--bytes32"><a class="header" href="#topicint256-_param--bytes32"><strong><code>topic(int256 _param) → (bytes32)</code></strong></a></h4>
+<p>Obtains the topic representation of a <code>int256</code> parameter.</p>
+<h4 id="recordlogs"><a class="header" href="#recordlogs"><strong><code>recordLogs()</code></strong></a></h4>
+<p>Starts recording all transactions logs.</p>
+<h4 id="getrecordedlogs--log-logs"><a class="header" href="#getrecordedlogs--log-logs"><strong><code>getRecordedLogs() → (Log[] logs)</code></strong></a></h4>
+<p>Obtains all recorded transactions logs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="forks-1"><a class="header" href="#forks-1">Forks</a></h1>
+<h4 id="createstring-nameorendpoint--fork"><a class="header" href="#createstring-nameorendpoint--fork"><strong><code>create(string nameOrEndpoint) → (Fork)</code></strong></a></h4>
+<p>Create a new fork using the provided endpoint.</p>
+<h4 id="createatblockstring-nameorendpoint-uint256-blocknumber--fork"><a class="header" href="#createatblockstring-nameorendpoint-uint256-blocknumber--fork"><strong><code>createAtBlock(string nameOrEndpoint, uint256 blockNumber) → (Fork)</code></strong></a></h4>
+<p>Create a new fork using the provided endpoint at a given block number.</p>
+<h4 id="createbeforetxstring-nameorendpoint-bytes32-txhash--fork"><a class="header" href="#createbeforetxstring-nameorendpoint-bytes32-txhash--fork"><strong><code>createBeforeTx(string nameOrEndpoint, bytes32 txHash) → (Fork)</code></strong></a></h4>
+<p>Create a new fork using the provided endpoint at a state right before the provided transaction hash.</p>
+<h4 id="selectfork-self--fork"><a class="header" href="#selectfork-self--fork"><strong><code>select(Fork self) → (Fork)</code></strong></a></h4>
+<p>Set the provided fork as the current active fork.</p>
+<h4 id="active--fork"><a class="header" href="#active--fork"><strong><code>active() → (Fork)</code></strong></a></h4>
+<p>Get the current active fork.</p>
+<h4 id="setblocknumberfork-self-uint256-blocknumber--fork"><a class="header" href="#setblocknumberfork-self-uint256-blocknumber--fork"><strong><code>setBlockNumber(Fork self, uint256 blockNumber) → (Fork)</code></strong></a></h4>
+<p>Set the block number of the provided fork.</p>
+<h4 id="beforetxfork-self-bytes32-txhash--fork"><a class="header" href="#beforetxfork-self-bytes32-txhash--fork"><strong><code>beforeTx(Fork self, bytes32 txHash) → (Fork)</code></strong></a></h4>
+<p>Set the provided fork to the state right before the provided transaction hash.</p>
+<h4 id="persistbetweenforksaddress-self--address"><a class="header" href="#persistbetweenforksaddress-self--address"><strong><code>persistBetweenForks(address self) → (address)</code></strong></a></h4>
+<p>Make the state of the provided address persist between forks.</p>
+<h4 id="persistbetweenforksaddress-who1-address-who2"><a class="header" href="#persistbetweenforksaddress-who1-address-who2"><strong><code>persistBetweenForks(address who1, address who2)</code></strong></a></h4>
+<p>Make the state of the provided addresses persist between forks.</p>
+<h4 id="persistbetweenforksaddress-who1-address-who2-address-who3"><a class="header" href="#persistbetweenforksaddress-who1-address-who2-address-who3"><strong><code>persistBetweenForks(address who1, address who2, address who3)</code></strong></a></h4>
+<p>Make the state of the provided addresses persist between forks.</p>
+<h4 id="persistbetweenforksaddress-whos"><a class="header" href="#persistbetweenforksaddress-whos"><strong><code>persistBetweenForks(address[] whos)</code></strong></a></h4>
+<p>Make the state of the provided addresses persist between forks.</p>
+<h4 id="stoppersistaddress-who--address"><a class="header" href="#stoppersistaddress-who--address"><strong><code>stopPersist(address who) → (address)</code></strong></a></h4>
+<p>Revoke the persistent state of the provided address.</p>
+<h4 id="stoppersistaddress-whos"><a class="header" href="#stoppersistaddress-whos"><strong><code>stopPersist(address[] whos)</code></strong></a></h4>
+<p>Revoke the persistent state of the provided addresses.</p>
+<h4 id="ispersistentaddress-who--bool"><a class="header" href="#ispersistentaddress-who--bool"><strong><code>isPersistent(address who) → (bool)</code></strong></a></h4>
+<p>Check if the provided address is being persisted between forks.</p>
+<h4 id="allowcheatcodesaddress-who--address"><a class="header" href="#allowcheatcodesaddress-who--address"><strong><code>allowCheatcodes(address who) → (address)</code></strong></a></h4>
+<p>Allow cheatcodes to be used by the provided address in forking mode.</p>
+<h4 id="executetxbytes32-txhash"><a class="header" href="#executetxbytes32-txhash"><strong><code>executeTx(bytes32 txHash)</code></strong></a></h4>
+<p>Executes an existing transaction in the current active fork.</p>
+<h4 id="executetxfork-self-bytes32-txhash--fork"><a class="header" href="#executetxfork-self-bytes32-txhash--fork"><strong><code>executeTx(Fork self, bytes32 txHash) → (Fork)</code></strong></a></h4>
+<p>Executes an existing transaction in the provided fork.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fs-1"><a class="header" href="#fs-1">Fs</a></h1>
+<pre><code class="language-solidity">struct FsMetadata {
+    bool isDir;
+    bool isSymlink;
+    uint256 length;
+    bool readOnly;
+    uint256 modified;
+    uint256 accessed;
+    uint256 created;
+}
+</code></pre>
+<h4 id="readfilestring-path--string-"><a class="header" href="#readfilestring-path--string-"><strong><code>readFile(string path) → (string )</code></strong></a></h4>
+<p>Reads the file on <code>path</code> and returns its content as a <code>string</code>.</p>
+<h4 id="readfilebinarystring-path--bytes-"><a class="header" href="#readfilebinarystring-path--bytes-"><strong><code>readFileBinary(string path) → (bytes )</code></strong></a></h4>
+<p>Reads the file on <code>path</code> and returns its content as a <code>bytes</code>.</p>
+<h4 id="projectroot--string-"><a class="header" href="#projectroot--string-"><strong><code>projectRoot() → (string )</code></strong></a></h4>
+<p>Obtains the current project's root.</p>
+<h4 id="metadatastring-fileordir--fsmetadata-data"><a class="header" href="#metadatastring-fileordir--fsmetadata-data"><strong><code>metadata(string fileOrDir) → (FsMetadata data)</code></strong></a></h4>
+<p>Obtains the metadata of the specified file or directory.</p>
+<h4 id="readlinestring-path--string-"><a class="header" href="#readlinestring-path--string-"><strong><code>readLine(string path) → (string )</code></strong></a></h4>
+<p>Reads the next line of the file on <code>path</code>.</p>
+<h4 id="writefilestring-path-string-data"><a class="header" href="#writefilestring-path-string-data"><strong><code>writeFile(string path, string data)</code></strong></a></h4>
+<p>Modifies the content of the file on <code>path</code> with <code>data</code>.</p>
+<h4 id="writefilebinarystring-path-bytes-data"><a class="header" href="#writefilebinarystring-path-bytes-data"><strong><code>writeFileBinary(string path, bytes data)</code></strong></a></h4>
+<p>Modifies the content of the file on <code>path</code> with <code>data</code>.</p>
+<h4 id="writelinestring-path-string-data"><a class="header" href="#writelinestring-path-string-data"><strong><code>writeLine(string path, string data)</code></strong></a></h4>
+<p>Adds a new line to the file on <code>path</code>.</p>
+<h4 id="closefilestring-path"><a class="header" href="#closefilestring-path"><strong><code>closeFile(string path)</code></strong></a></h4>
+<p>Resets the state of the file on <code>path</code>.</p>
+<h4 id="removefilestring-path"><a class="header" href="#removefilestring-path"><strong><code>removeFile(string path)</code></strong></a></h4>
+<p>Deletes the file on <code>path</code>.</p>
+<h4 id="copyfilestring-origin-string-target"><a class="header" href="#copyfilestring-origin-string-target"><strong><code>copyFile(string origin, string target)</code></strong></a></h4>
+<p>Copies a file from <code>origin</code> to <code>target</code>.</p>
+<h4 id="movefilestring-origin-string-target"><a class="header" href="#movefilestring-origin-string-target"><strong><code>moveFile(string origin, string target)</code></strong></a></h4>
+<p>Moves a file from <code>origin</code> to <code>target</code>.</p>
+<h4 id="fileexistsstring-path--bool"><a class="header" href="#fileexistsstring-path--bool"><strong><code>fileExists(string path) → (bool)</code></strong></a></h4>
+<p>Checks if a file or directory exists.</p>
+<h4 id="getcodestring-path--bytes-"><a class="header" href="#getcodestring-path--bytes-"><strong><code>getCode(string path) → (bytes )</code></strong></a></h4>
+<p>Obtains the creation code from an artifact file located at <code>path</code></p>
+<h4 id="getdeployedcodestring-path--bytes-"><a class="header" href="#getdeployedcodestring-path--bytes-"><strong><code>getDeployedCode(string path) → (bytes )</code></strong></a></h4>
+<p>Obtains the deployed code from an artifact file located at <code>path</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="json-1"><a class="header" href="#json-1">Json</a></h1>
+<pre><code class="language-solidity">struct JsonObject {
+    string id;
+    string serialized;
+}
+</code></pre>
+<h4 id="parseobjectstring-jsonstr-string-key--bytes-abiencodeddata"><a class="header" href="#parseobjectstring-jsonstr-string-key--bytes-abiencodeddata"><strong><code>parseObject(string jsonStr, string key) → (bytes abiEncodedData)</code></strong></a></h4>
+<p>Parses a json object string by key and returns an ABI encoded value.</p>
+<h4 id="parseobjectstring-jsonstr--bytes-abiencodeddata"><a class="header" href="#parseobjectstring-jsonstr--bytes-abiencodeddata"><strong><code>parseObject(string jsonStr) → (bytes abiEncodedData)</code></strong></a></h4>
+<p>Parses a json object string and returns an ABI encoded tuple.</p>
+<h4 id="parseobjectjsonobject-jsonobj-string-key--bytes-abiencodeddata"><a class="header" href="#parseobjectjsonobject-jsonobj-string-key--bytes-abiencodeddata"><strong><code>parseObject(JsonObject jsonObj, string key) → (bytes abiEncodedData)</code></strong></a></h4>
+<p>Parses a json object struct by key and returns an ABI encoded value.</p>
+<h4 id="parseobjectjsonobject-jsonobj--bytes-abiencodeddata"><a class="header" href="#parseobjectjsonobject-jsonobj--bytes-abiencodeddata"><strong><code>parseObject(JsonObject jsonObj) → (bytes abiEncodedData)</code></strong></a></h4>
+<p>Parses a json object struct and returns an ABI encoded tuple.</p>
+<h4 id="parseuintstring-jsonstr-string-key--uint256"><a class="header" href="#parseuintstring-jsonstr-string-key--uint256"><strong><code>parseUint(string jsonStr, string key) → (uint256)</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as uint256.</p>
+<h4 id="parseuintarraystring-jsonstr-string-key--uint256-"><a class="header" href="#parseuintarraystring-jsonstr-string-key--uint256-"><strong><code>parseUintArray(string jsonStr, string key) → (uint256[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as uint256[].</p>
+<h4 id="parseintstring-jsonstr-string-key--int256"><a class="header" href="#parseintstring-jsonstr-string-key--int256"><strong><code>parseInt(string jsonStr, string key) → (int256)</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as int256.</p>
+<h4 id="parseintarraystring-jsonstr-string-key--int256-"><a class="header" href="#parseintarraystring-jsonstr-string-key--int256-"><strong><code>parseIntArray(string jsonStr, string key) → (int256[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as int256[].</p>
+<h4 id="parseboolstring-jsonstr-string-key--bool"><a class="header" href="#parseboolstring-jsonstr-string-key--bool"><strong><code>parseBool(string jsonStr, string key) → (bool)</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bool.</p>
+<h4 id="parseboolarraystring-jsonstr-string-key--bool-"><a class="header" href="#parseboolarraystring-jsonstr-string-key--bool-"><strong><code>parseBoolArray(string jsonStr, string key) → (bool[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bool[].</p>
+<h4 id="parseaddressstring-jsonstr-string-key--address"><a class="header" href="#parseaddressstring-jsonstr-string-key--address"><strong><code>parseAddress(string jsonStr, string key) → (address)</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as address.</p>
+<h4 id="parseaddressarraystring-jsonstr-string-key--address-"><a class="header" href="#parseaddressarraystring-jsonstr-string-key--address-"><strong><code>parseAddressArray(string jsonStr, string key) → (address[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as address.</p>
+<h4 id="parsestringstring-jsonstr-string-key--string-"><a class="header" href="#parsestringstring-jsonstr-string-key--string-"><strong><code>parseString(string jsonStr, string key) → (string )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as string.</p>
+<h4 id="parsestringarraystring-jsonstr-string-key--string-"><a class="header" href="#parsestringarraystring-jsonstr-string-key--string-"><strong><code>parseStringArray(string jsonStr, string key) → (string[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as string[].</p>
+<h4 id="parsebytesstring-jsonstr-string-key--bytes-"><a class="header" href="#parsebytesstring-jsonstr-string-key--bytes-"><strong><code>parseBytes(string jsonStr, string key) → (bytes )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bytes.</p>
+<h4 id="parsebytesarraystring-jsonstr-string-key--bytes-"><a class="header" href="#parsebytesarraystring-jsonstr-string-key--bytes-"><strong><code>parseBytesArray(string jsonStr, string key) → (bytes[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bytes[].</p>
+<h4 id="parsebytes32string-jsonstr-string-key--bytes32"><a class="header" href="#parsebytes32string-jsonstr-string-key--bytes32"><strong><code>parseBytes32(string jsonStr, string key) → (bytes32)</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bytes32.</p>
+<h4 id="parsebytes32arraystring-jsonstr-string-key--bytes32-"><a class="header" href="#parsebytes32arraystring-jsonstr-string-key--bytes32-"><strong><code>parseBytes32Array(string jsonStr, string key) → (bytes32[] )</code></strong></a></h4>
+<p>Parses the value of the <code>key</code> contained on <code>jsonStr</code> as bytes32[].</p>
+<h4 id="create--jsonobject-"><a class="header" href="#create--jsonobject-"><strong><code>create() → (JsonObject )</code></strong></a></h4>
+<p>Creates a JsonObject struct with an identifier.</p>
+<h4 id="serializejsonobject-obj-string-key-bool-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bool-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bool value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-uint256-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-uint256-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, uint256 value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-int256-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-int256-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, int256 value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-address-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-address-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, address value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-bytes32-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bytes32-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bytes32 value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-string-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-string-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, string value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-bytes-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bytes-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bytes value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-bool-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bool-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bool[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-uint256-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-uint256-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, uint256[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-int256-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-int256-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, int256[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-address-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-address-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, address[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-bytes32-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bytes32-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bytes32[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-string-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-string-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, string[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-bytes-values--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-bytes-values--jsonobject-"><strong><code>serialize(JsonObject obj, string key, bytes[] values) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="serializejsonobject-obj-string-key-jsonobject-value--jsonobject-"><a class="header" href="#serializejsonobject-obj-string-key-jsonobject-value--jsonobject-"><strong><code>serialize(JsonObject obj, string key, JsonObject value) → (JsonObject )</code></strong></a></h4>
+<p>Serializes and sets the key and value for the provided json object.</p>
+<h4 id="writejsonobject-obj-string-path"><a class="header" href="#writejsonobject-obj-string-path"><strong><code>write(JsonObject obj, string path)</code></strong></a></h4>
+<p>Writes a JsonObject struct to a file.</p>
+<h4 id="writejsonobject-obj-string-path-string-key"><a class="header" href="#writejsonobject-obj-string-path-string-key"><strong><code>write(JsonObject obj, string path, string key)</code></strong></a></h4>
+<p>Writes a JsonObject struct to an existing json file modifying only a specific key.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="strings-1"><a class="header" href="#strings-1">Strings</a></h1>
+<h4 id="tostringaddress-value--string-"><a class="header" href="#tostringaddress-value--string-"><strong><code>toString(address value) → (string )</code></strong></a></h4>
+<p>Transforms an address to a string.</p>
+<h4 id="tostringbytes-value--string-"><a class="header" href="#tostringbytes-value--string-"><strong><code>toString(bytes value) → (string )</code></strong></a></h4>
+<p>Transforms a byte array to a string.</p>
+<h4 id="tostringbytes32-value--string-"><a class="header" href="#tostringbytes32-value--string-"><strong><code>toString(bytes32 value) → (string )</code></strong></a></h4>
+<p>Transforms a bytes32 to a string.</p>
+<h4 id="tostringbool-value--string-"><a class="header" href="#tostringbool-value--string-"><strong><code>toString(bool value) → (string )</code></strong></a></h4>
+<p>Transforms a boolean to a string.</p>
+<h4 id="tostringuint256-value--string-"><a class="header" href="#tostringuint256-value--string-"><strong><code>toString(uint256 value) → (string )</code></strong></a></h4>
+<p>Transforms an uint256 to a string.</p>
+<h4 id="tostringint256-value--string-"><a class="header" href="#tostringint256-value--string-"><strong><code>toString(int256 value) → (string )</code></strong></a></h4>
+<p>Transforms an int256 to a string.</p>
+<h4 id="parsebytesstring-value--bytes-"><a class="header" href="#parsebytesstring-value--bytes-"><strong><code>parseBytes(string value) → (bytes )</code></strong></a></h4>
+<p>Parses a byte array string.</p>
+<h4 id="parseaddressstring-value--address"><a class="header" href="#parseaddressstring-value--address"><strong><code>parseAddress(string value) → (address)</code></strong></a></h4>
+<p>Parses an address string.</p>
+<h4 id="parseuintstring-value--uint256"><a class="header" href="#parseuintstring-value--uint256"><strong><code>parseUint(string value) → (uint256)</code></strong></a></h4>
+<p>Parses an uint256 string.</p>
+<h4 id="parseintstring-value--int256"><a class="header" href="#parseintstring-value--int256"><strong><code>parseInt(string value) → (int256)</code></strong></a></h4>
+<p>Parses an int256 string.</p>
+<h4 id="parsebytes32string-value--bytes32"><a class="header" href="#parsebytes32string-value--bytes32"><strong><code>parseBytes32(string value) → (bytes32)</code></strong></a></h4>
+<p>Parses a bytes32 string.</p>
+<h4 id="parseboolstring-value--bool"><a class="header" href="#parseboolstring-value--bool"><strong><code>parseBool(string value) → (bool)</code></strong></a></h4>
+<p>Parses a boolean string.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="watchers-1"><a class="header" href="#watchers-1">Watchers</a></h1>
+<h4 id="watcheraddressaddress-target--address"><a class="header" href="#watcheraddressaddress-target--address"><strong><code>watcherAddress(address target) → (address)</code></strong></a></h4>
+<p>Obtains the address of the watcher for <code>target</code>.</p>
+<h4 id="targetaddressaddress-_watcher--address"><a class="header" href="#targetaddressaddress-_watcher--address"><strong><code>targetAddress(address _watcher) → (address)</code></strong></a></h4>
+<p>Obtains the address of the target for <code>_target</code>.</p>
+<h4 id="watcheraddress-target--watcher"><a class="header" href="#watcheraddress-target--watcher"><strong><code>watcher(address target) → (Watcher)</code></strong></a></h4>
+<p>Obtains the Watcher implementation for the <code>target</code> address.</p>
+<h4 id="watchaddress-target--watcher"><a class="header" href="#watchaddress-target--watcher"><strong><code>watch(address target) → (Watcher)</code></strong></a></h4>
+<p>Starts watching a <code>target</code> address.</p>
+<h4 id="stopaddress-target"><a class="header" href="#stopaddress-target"><strong><code>stop(address target)</code></strong></a></h4>
+<p>Stops watching the <code>target</code> address.</p>
+<h4 id="stopwatcheraddress-target"><a class="header" href="#stopwatcheraddress-target"><strong><code>stopWatcher(address target)</code></strong></a></h4>
+<p>Stops watching the <code>target</code> address.</p>
+<h4 id="callsaddress-target--call-"><a class="header" href="#callsaddress-target--call-"><strong><code>calls(address target) → (Call[] )</code></strong></a></h4>
+<p>Obtains all the calls made to the <code>target</code> address.</p>
+<h4 id="getcalladdress-target-uint256-index--call-"><a class="header" href="#getcalladdress-target-uint256-index--call-"><strong><code>getCall(address target, uint256 index) → (Call )</code></strong></a></h4>
+<p>Obtains an specific call made to the <code>target</code> address at an specific index.</p>
+<h4 id="firstcalladdress-target--call-"><a class="header" href="#firstcalladdress-target--call-"><strong><code>firstCall(address target) → (Call )</code></strong></a></h4>
+<p>Obtains the first call made to the <code>target</code> address.</p>
+<h4 id="lastcalladdress-target--call-"><a class="header" href="#lastcalladdress-target--call-"><strong><code>lastCall(address target) → (Call )</code></strong></a></h4>
+<p>Obtains the last call made to the <code>target</code> address.</p>
+<h4 id="capturerevertsaddress-target--watcher"><a class="header" href="#capturerevertsaddress-target--watcher"><strong><code>captureReverts(address target) → (Watcher)</code></strong></a></h4>
+<p>Starts capturing reverts for the <code>target</code> address. This will prevent the <code>target</code> contract to
+revert until <code>disableCaptureReverts</code> is called. This is meant to be used in conjunction with the <code>toHaveReverted</code> and
+<code>toHaveRevertedWith</code> functions from the expect library.</p>
+<h4 id="disablecapturerevertsaddress-target--watcher"><a class="header" href="#disablecapturerevertsaddress-target--watcher"><strong><code>disableCaptureReverts(address target) → (Watcher)</code></strong></a></h4>
+<p>Stops capturing reverts for the <code>target</code> address.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="solidity.min.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
